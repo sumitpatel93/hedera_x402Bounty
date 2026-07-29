@@ -2,6 +2,8 @@
 
 ARIA lets an AI agent safely spend money on someone else's behalf, without a human in the loop for every payment — by using a decentralized identity/credential trail on Hedera to decide *whether* to pay, and the x402 protocol over Hedera Token Service to actually *move the money*.
 
+**Demo video:** [TODO: add demo video link]
+
 ## The problem
 
 AI agents can now negotiate, book, and execute tasks autonomously — but the moment one needs to actually spend money (reimburse a $20 receipt, pay for an API call, settle a small invoice), it hits a wall. Legacy payment rails assume a human clicks "approve." Corporate expense reimbursement is a good example: it's bottlenecked by manual approval queues and card/bank rails that have no concept of "verify this requester's identity and authorization programmatically, then pay them in one HTTP round trip."
