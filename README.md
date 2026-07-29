@@ -2,7 +2,9 @@
 
 ARIA lets an AI agent safely spend money on someone else's behalf, without a human in the loop for every payment — by using a decentralized identity/credential trail on Hedera to decide *whether* to pay, and the x402 protocol over Hedera Token Service to actually *move the money*.
 
-**Demo video:** [TODO: add demo video link]
+## Demo Video
+
+[TODO: add demo video link]
 
 ## The problem
 
