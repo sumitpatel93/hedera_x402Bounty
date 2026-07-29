@@ -1,0 +1,37 @@
+{
+  "name": "aria",
+  "version": "0.1.0",
+  "description": "ARIA - Autonomous Reimbursement & Identity Agent. DID/VC-gated micro-treasury payouts over Hedera using the x402 protocol.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "setup:accounts": "tsx src/setup/setupAccounts.ts",
+    "setup:identity": "tsx src/setup/setupIdentity.ts",
+    "cli": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hiero-ledger/sdk": "^2.86.2",
+    "@x402/core": "^2.20.0",
+    "@x402/express": "^2.20.0",
+    "@x402/fetch": "^2.20.0",
+    "@x402/hedera": "^2.20.0",
+    "better-sqlite3": "^13.0.2",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.4",
+    "@types/prompts": "^2.4.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "overrides": {
+    "@hiero-ledger/sdk": "^2.86.2"
+  }
+}
