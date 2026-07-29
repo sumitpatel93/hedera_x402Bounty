@@ -62,8 +62,8 @@ export const config = {
 export const caipNetwork = config.network === "mainnet" ? "hedera:mainnet" : "hedera:testnet";
 
 export function hashscanTxUrl(transactionId: string): string {
-  const safeId = transactionId.replace(/@/g, "-").replace(/\./g, "-");
-  return `https://hashscan.io/${config.network}/transaction/${safeId}`;
+  // HashScan expects the raw Hedera transaction id (account@seconds.nanos) verbatim.
+  return `https://hashscan.io/${config.network}/transaction/${transactionId}`;
 }
 
 export function hashscanAccountUrl(accountId: string): string {

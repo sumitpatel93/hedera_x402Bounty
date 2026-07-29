@@ -147,7 +147,7 @@ You'll be prompted for a reimbursement amount and a description. The console pri
 
 This isn't a mock — the flow above has been run end-to-end against Hedera Testnet. Example settled transaction from a $20 reimbursement:
 
-- Transaction: [`0.0.9829012@1785333507.291370163`](https://hashscan.io/testnet/transaction/0-0-9829012-1785333507-291370163)
+- Transaction: [`0.0.9829012@1785333507.291370163`](https://hashscan.io/testnet/transaction/0.0.9829012@1785333507.291370163)
 - Mirror node confirms `result: SUCCESS` with a clean 20 USDC transfer from ARIA (`0.0.8449816`) to the Employee (`0.0.9829012`)
 
 ## Notable implementation details / gotchas
