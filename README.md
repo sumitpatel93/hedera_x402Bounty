@@ -4,7 +4,11 @@ ARIA lets an AI agent safely spend money on someone else's behalf, without a hum
 
 ## Demo Video
 
-[TODO: add demo video link]
+[▶ Watch the demo (MP4)](demo/aria-demo.mp4)
+
+![ARIA demo](demo/aria-demo.gif)
+
+Recorded straight from the terminal against real Hedera Testnet: a $20 reimbursement resolves the employee's DID on HCS, verifies the issuer-signed VC, checks the spend limit, and settles over x402 — followed by a second request that gets rejected once the monthly budget is used up.
 
 ## The problem
 

@@ -75,15 +75,24 @@ async function processExpenseRequest(amountUsd: number, description: string) {
   console.log(`Reimbursed $${amountUsd.toFixed(2)} to ${employeeDid} for "${description}".`);
 }
 
+function parseCliArgs(): { amountUsd: number; description: string } | null {
+  const args = process.argv.slice(2);
+  const amountArg = args.find((a) => a.startsWith("--amount="))?.split("=")[1];
+  const descriptionArg = args.find((a) => a.startsWith("--description="))?.split("=")[1];
+  if (amountArg == null) return null;
+  return { amountUsd: Number(amountArg), description: descriptionArg ?? "Reimbursement" };
+}
+
 async function main() {
   console.log("Starting Employee Agent resource server (x402 payee)...");
   const employeeServer = await startEmployeeServer();
   console.log(`Employee Agent listening at ${employeeServer.url}`);
 
-  const answers = await prompts([
+  const cliArgs = parseCliArgs();
+  const answers = cliArgs ?? (await prompts([
     { type: "number", name: "amountUsd", message: "Reimbursement amount (USD)", initial: 20 },
     { type: "text", name: "description", message: "Receipt description", initial: "Monthly SaaS subscription" },
-  ]);
+  ]));
 
   if (answers.amountUsd == null) {
     employeeServer.close();
